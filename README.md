@@ -32,8 +32,8 @@ Your users should be able to:
 
 ### Links
 
-- Solution URL:
-- Live Site URL:
+- Solution URL: https://github.com/JairRaid/Clock-app
+- Live Site URL: https://jairraid.github.io/Clock-app/
 
 ## My process
 

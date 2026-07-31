@@ -28,8 +28,14 @@ export const ClockProvider = ({ children }) => {
     const loadQuote = async () => {
       try {
         const data = await getRandomQuote();
+        console.log(data);
         setQuote(data);
       } catch (err) {
+        setQuote({
+          content:
+            "Always be yourself, express yourself, have faith in yourself, do not go out and look for a successful personality and duplicate it.",
+          author: "Bruce Lee",
+        });
         console.log(err.message);
       }
     };
