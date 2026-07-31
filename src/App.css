@@ -1,0 +1,122 @@
+@reference "./index.css";
+
+.main-content {
+  @apply relative border overflow-y-hidden
+  flex flex-col
+  min-h-dvh;
+}
+
+.clock__background {
+  @apply absolute -z-10
+  w-full h-full object-cover;
+}
+
+/* Clock Card */
+.clock {
+  @apply grow flex flex-col;
+
+  /* Overlay */
+  .clock__overlay {
+    @apply px-16 py-32 h-full
+    relative
+    grow flex flex-col items-start
+    md:p-64;
+  }
+
+  /* Quote */
+  .quote {
+    @apply text-18 text-[var(--neutral-0)] 
+    flex items-start gap-x-16
+    max-w-[31.875rem];
+  }
+  blockquote p {
+    @apply text-18;
+  }
+  cite {
+    @apply font-bold not-italic;
+  }
+  footer {
+    @apply mt-12;
+  }
+  .quote__button {
+    @apply transition duration-300 
+    hover:rotate-180;
+  }
+  .quote.hide {
+    @apply h-0 p-0;
+  }
+
+  /* Current Time */
+  .time {
+    @apply text-[var(--neutral-0)]
+    flex flex-col gap-y-24
+    mt-auto
+    md:gap-y-40;
+  }
+  .time__period {
+    @apply text-20 leading-110 tracking-4
+    flex gap-x-16;
+  }
+  .time__timezone {
+    @apply font-light text-20 leading-73
+    md:text-40;
+  }
+  .time__current {
+    @apply font-bold text-100 leading-73
+    md:text-200;
+  }
+  .time__location {
+    @apply font-bold text-15 leading-110 tracking-3
+    md:text-24 md:tracking-4;
+  }
+
+  /* Expand Button */
+  .clock__toggle {
+    @apply font-bold text-16 tracking-5 text-[var(--neutral-800)] uppercase bg-[var(--neutral-0)] rounded-full
+    flex items-center gap-x-12
+    mt-64 pl-20
+    md:mt-80
+    lg:absolute lg:mt-0 lg:bottom-64 lg:right-64;
+  }
+  .clock__toggle-icon {
+    @apply bg-[var(--neutral-800)] size-40 
+    inline-flex justify-center items-center rounded-full
+    my-8 mr-8;
+  }
+  .clock__toggle-icon,
+  .clock__toggle-svg {
+    @apply transition duration-200;
+  }
+  .clock__toggle:hover .clock__toggle-icon,
+  .clock__toggle:active .clock__toggle-icon {
+    @apply bg-[var(--neutral-500)];
+  }
+}
+
+/* Additional Information */
+.clock-details {
+  @apply bg-details-bg/75 text-[var(--neutral-800)] backdrop-blur-[.625rem] transition-normal duration-300
+  px-16 py-48
+  md:px-64 md:py-112;
+
+  .details__list {
+    @apply flex flex-col gap-y-16
+    md:grid md:grid-cols-2 md:gap-40;
+  }
+  .details__item {
+    @apply flex justify-between
+    md:flex-col md:gap-y-12 md:self-start;
+  }
+  .details__term {
+    @apply text-10 tracking-2 uppercase text-term/90
+    md:text-15;
+  }
+  .details__definition {
+    @apply font-bold text-20 leading-120 text-term
+    md:text-40 md:wrap-anywhere;
+  }
+}
+
+.clock-details.hide {
+  @apply h-0 p-0;
+}
