@@ -176,6 +176,7 @@ const App = () => {
         id="clock-details"
         className={`clock-details ${isExpanded ? "" : "hide"}`}
         aria-labelledby="details-heading"
+        aria-hidden={!isExpanded}
       >
         <h2 id="details-heading" className="sr-only">
           Additional time information

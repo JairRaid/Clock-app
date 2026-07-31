@@ -51,7 +51,6 @@ export const ClockProvider = ({ children }) => {
         if (isNight) document.documentElement.classList.add("dark");
         else document.documentElement.classList.remove("dark");
 
-        //set timeData
         setTimeData(data);
       } catch (err) {
         console.log(err.message);
