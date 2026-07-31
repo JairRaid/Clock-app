@@ -1,5 +1,5 @@
 export const formatTime24Hour = (dateTime) => {
-  if (!dateTime) return;
+  if (!dateTime) return null;
   const datetimeStr = dateTime;
   const date = new Date(datetimeStr);
 
@@ -11,7 +11,7 @@ export const formatTime24Hour = (dateTime) => {
 };
 
 export const getHours = (dateTime) => {
-  if (!dateTime) return;
+  if (!dateTime) return null;
   const datetimeStr = dateTime;
   const date = new Date(datetimeStr);
   const hours = date.getHours();
