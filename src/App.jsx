@@ -58,7 +58,7 @@ const App = () => {
       {/* <!-- Clock Card --> */}
       <section className="clock" aria-labelledby="current-time-heading">
         {/* <!-- Overlay --> */}
-        <div className={`clock__overlay ${isExpanded && "justify-center"}`}>
+        <div className="clock__overlay">
           {/* <!-- Quote --> */}
           {!isExpanded && (
             <aside className="quote" aria-labelledby="quote-heading">
@@ -125,7 +125,7 @@ const App = () => {
             </p>
 
             <h1 id="current-time-heading">
-              <time dateTime="11:37" className="time__current">
+              <time dateTime={time24hour} className="time__current">
                 {time24hour}
               </time>
 
@@ -174,7 +174,7 @@ const App = () => {
       {/* <!-- Additional Information --> */}
       <section
         id="clock-details"
-        className={`clock-details ${!isExpanded && "hide"}`}
+        className={`clock-details ${isExpanded ? "" : "hide"}`}
         aria-labelledby="details-heading"
       >
         <h2 id="details-heading" className="sr-only">

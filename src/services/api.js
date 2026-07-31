@@ -28,8 +28,7 @@ export const getIpData = async () => {
     "https://ipapi.co/json/?token=1HHdbVjzDNd97atR9gYwXsbFFiKD5TiSi09ubBKED8p0gNDVsB";
   const response = await fetch(url);
 
-  if (!response.ok)
-    throw new Error("Ip Data HTTP Error: " + (await response).status);
+  if (!response.ok) throw new Error("Ip Data HTTP Error: " + response.status);
 
   return response.json();
 };

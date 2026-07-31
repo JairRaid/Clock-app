@@ -28,7 +28,6 @@ export const ClockProvider = ({ children }) => {
     const loadQuote = async () => {
       try {
         const data = await getRandomQuote();
-        console.log(data);
         setQuote(data);
       } catch (err) {
         setQuote({
