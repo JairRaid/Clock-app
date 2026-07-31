@@ -27,7 +27,7 @@ const App = () => {
   } = timeData || {};
   const { city, country } = ipData || {};
 
-  const time24hour = formatTime24Hour(datetime);
+  const time24hour = formatTime24Hour(datetime) || "";
 
   return (
     <main className="main-content">

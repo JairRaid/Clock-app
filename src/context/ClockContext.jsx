@@ -12,7 +12,7 @@ export const ClockProvider = ({ children }) => {
   const [ipData, setIpData] = useState(null);
   const [timeData, setTimeData] = useState(null);
   const toggleClockDetails = () => {
-    setIsExpanded((prev) => (prev ? false : true));
+    setIsExpanded((prev) => !prev);
   };
 
   const getQuote = async () => {
