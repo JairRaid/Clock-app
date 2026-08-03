@@ -1,5 +1,5 @@
 export const getRandomQuote = async () => {
-  const response = await fetch("https://api.quotable.io/random");
+  const response = await fetch("https://quote-three-hazel.vercel.app/random");
 
   if (!response.ok) throw new Error("HTTP Error: " + response.status);
 
