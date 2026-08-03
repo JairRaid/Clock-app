@@ -5,7 +5,7 @@ import { formatTime24Hour } from "./utils/timeUtils";
 
 const App = () => {
   const {
-    quote,
+    randomQuote,
     ipData,
     timeData,
     isExpanded,
@@ -16,7 +16,7 @@ const App = () => {
 
   const handleToggle = () => toggleClockDetails();
 
-  const { content, author } = quote || {};
+  const { quote: content, author } = randomQuote || {};
   const {
     timezone,
     day_of_year,
@@ -66,7 +66,7 @@ const App = () => {
                 Inspirational quote
               </h2>
 
-              {quote && (
+              {randomQuote && (
                 <blockquote>
                   <p>{`“${content}”`}</p>
 

@@ -8,7 +8,7 @@ export const ClockProvider = ({ children }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isDark, setIsDark] = useState(false);
 
-  const [quote, setQuote] = useState(null);
+  const [randomQuote, setQuote] = useState(null);
   const [ipData, setIpData] = useState(null);
   const [timeData, setTimeData] = useState(null);
   const toggleClockDetails = () => {
@@ -74,11 +74,11 @@ export const ClockProvider = ({ children }) => {
   const value = {
     isExpanded,
     isDark,
-    toggleClockDetails,
-    quote,
-    getQuote,
+    randomQuote,
     timeData,
     ipData,
+    toggleClockDetails,
+    getQuote,
   };
   return (
     <ClockContext.Provider value={value}>{children}</ClockContext.Provider>
