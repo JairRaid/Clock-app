@@ -27,8 +27,6 @@ const App = () => {
   } = timeData || {};
   const { data } = ipData || {};
 
-  console.log(data);
-
   const time24hour = formatTime24Hour(datetime) || "";
 
   return (

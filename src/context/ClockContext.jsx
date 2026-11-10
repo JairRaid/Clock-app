@@ -61,7 +61,6 @@ export const ClockProvider = ({ children }) => {
       try {
         const data = await getIpData();
         setIpData(data);
-        console.log(data);
       } catch (err) {
         console.log(err.message);
       }
