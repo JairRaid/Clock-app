@@ -7,13 +7,14 @@ export const getRandomQuote = async () => {
 };
 
 export const getTimeData = async () => {
-  const url = "https://world-time-api3.p.rapidapi.com/ip"; //change the ip based on the user IP
+  const RAPIDAPI_KEY = import.meta.env.VITE_RAPIDAPI_KEY;
+  const url = "https://world-time-api3.p.rapidapi.com/ip";
   const options = {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
       "x-rapidapi-host": "world-time-api3.p.rapidapi.com",
-      "x-rapidapi-key": "c67c7498c1msh4fcfb3f9992a009p1d3702jsn662129e8f1b7",
+      "x-rapidapi-key": RAPIDAPI_KEY,
     },
   };
 
@@ -24,8 +25,8 @@ export const getTimeData = async () => {
 };
 
 export const getIpData = async () => {
-  const url =
-    "https://ipapi.co/json/?token=1HHdbVjzDNd97atR9gYwXsbFFiKD5TiSi09ubBKED8p0gNDVsB";
+  const IPBASE_KEY = import.meta.env.VITE_IPBASE_KEY;
+  const url = `https://api.ipbase.com/v2/info?apikey=${IPBASE_KEY}`;
   const response = await fetch(url);
 
   if (!response.ok) throw new Error("Ip Data HTTP Error: " + response.status);

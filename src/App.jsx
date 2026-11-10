@@ -25,7 +25,9 @@ const App = () => {
     abbreviation,
     datetime,
   } = timeData || {};
-  const { city, country } = ipData || {};
+  const { data } = ipData || {};
+
+  console.log(data);
 
   const time24hour = formatTime24Hour(datetime) || "";
 
@@ -136,7 +138,8 @@ const App = () => {
               IN
               <span>
                 {" "}
-                {city?.toUpperCase()}, {country}
+                {data?.location?.city?.name.toUpperCase()},{" "}
+                {data?.location?.country?.alpha2}
               </span>
             </p>
           </section>
